@@ -12,7 +12,7 @@ st.set_page_config(layout="wide", page_title="S&P 500 Alpha")
 def load_data():
     tickers = ['^GSPC', '^VIX', '^VIX3M', 'XLK', 'XLI', 'XLY', 'XLF', 'XLV']
     # Wir laden ab 2000 für eine solide Historie
-    df = yf.download(tickers, start="2018-01-01", progress=False, auto_adjust=True)['Close']
+    df = yf.download(tickers, start="2020-01-01", progress=False, auto_adjust=True)['Close']
     return df.dropna()
 
 try:
